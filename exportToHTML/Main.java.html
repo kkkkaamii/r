@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">company</span><span class="s2">.</span><span class="s1">details</span><span class="s2">.</span><span class="s1">Engine</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">company</span><span class="s2">.</span><span class="s1">professions</span><span class="s2">.</span><span class="s1">Driver</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">company</span><span class="s2">.</span><span class="s1">vehicles</span><span class="s2">.</span><span class="s1">Car</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Main </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s3">// Phone class demonstration</span>
+        <span class="s1">Phone phone1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Phone</span><span class="s2">(</span><span class="s4">&quot;1234567890&quot;</span><span class="s2">, </span><span class="s4">&quot;iPhone&quot;</span><span class="s2">, </span><span class="s5">0.35</span><span class="s2">);</span>
+        <span class="s1">Phone phone2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Phone</span><span class="s2">(</span><span class="s4">&quot;9876543210&quot;</span><span class="s2">, </span><span class="s4">&quot;Samsung Galaxy&quot;</span><span class="s2">, </span><span class="s5">0.28</span><span class="s2">);</span>
+        <span class="s1">Phone phone3 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Phone</span><span class="s2">(</span><span class="s4">&quot;1112223333&quot;</span><span class="s2">, </span><span class="s4">&quot;Xiaomi&quot;</span><span class="s2">, </span><span class="s5">0.83</span><span class="s2">);</span>
+
+        <span class="s1">phone1</span><span class="s2">.</span><span class="s1">receiveCall</span><span class="s2">(</span><span class="s4">&quot;Kamila&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Phone 1 number: &quot; </span><span class="s2">+ </span><span class="s1">phone1</span><span class="s2">.</span><span class="s1">getNumber</span><span class="s2">());</span>
+
+        <span class="s1">phone2</span><span class="s2">.</span><span class="s1">receiveCall</span><span class="s2">(</span><span class="s4">&quot;Alida&quot;</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Phone 2 number: &quot; </span><span class="s2">+ </span><span class="s1">phone2</span><span class="s2">.</span><span class="s1">getNumber</span><span class="s2">());</span>
+
+        <span class="s1">phone3</span><span class="s2">.</span><span class="s1">receiveCall</span><span class="s2">(</span><span class="s4">&quot;Amina&quot;</span><span class="s2">, </span><span class="s4">&quot;9998887777&quot;</span><span class="s2">);</span>
+
+        <span class="s1">phone1</span><span class="s2">.</span><span class="s1">sendMessage</span><span class="s2">(</span><span class="s4">&quot;1112223333&quot;</span><span class="s2">, </span><span class="s4">&quot;9998887777&quot;</span><span class="s2">);</span>
+        <span class="s1">phone2</span><span class="s2">.</span><span class="s1">sendMessage</span><span class="s2">(</span><span class="s4">&quot;1234567890&quot;</span><span class="s2">, </span><span class="s4">&quot;1112223333&quot;</span><span class="s2">, </span><span class="s4">&quot;9998887777&quot;</span><span class="s2">);</span>
+
+
+        <span class="s1">Person person1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Person</span><span class="s2">();</span>
+        <span class="s1">person1</span><span class="s2">.</span><span class="s1">move</span><span class="s2">();</span>
+        <span class="s1">person1</span><span class="s2">.</span><span class="s1">talk</span><span class="s2">();</span>
+
+        <span class="s1">Person person2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Person</span><span class="s2">(</span><span class="s4">&quot;Alida Beisenbai&quot;</span><span class="s2">, </span><span class="s5">17</span><span class="s2">);</span>
+        <span class="s1">person2</span><span class="s2">.</span><span class="s1">move</span><span class="s2">();</span>
+        <span class="s1">person2</span><span class="s2">.</span><span class="s1">talk</span><span class="s2">();</span>
+
+
+        <span class="s0">double</span><span class="s2">[][] </span><span class="s1">matrixArray1 </span><span class="s2">= {{</span><span class="s5">1</span><span class="s2">, </span><span class="s5">2</span><span class="s2">}, {</span><span class="s5">3</span><span class="s2">, </span><span class="s5">4</span><span class="s2">}};</span>
+        <span class="s0">double</span><span class="s2">[][] </span><span class="s1">matrixArray2 </span><span class="s2">= {{</span><span class="s5">5</span><span class="s2">, </span><span class="s5">6</span><span class="s2">}, {</span><span class="s5">7</span><span class="s2">, </span><span class="s5">8</span><span class="s2">}};</span>
+        <span class="s1">Matrix matrix1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Matrix</span><span class="s2">(</span><span class="s1">matrixArray1</span><span class="s2">);</span>
+        <span class="s1">Matrix matrix2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Matrix</span><span class="s2">(</span><span class="s1">matrixArray2</span><span class="s2">);</span>
+
+        <span class="s1">Matrix matrixAddition </span><span class="s2">= </span><span class="s1">matrix1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">matrix2</span><span class="s2">);</span>
+        <span class="s1">Matrix matrixScalarMultiplication </span><span class="s2">= </span><span class="s1">matrix1</span><span class="s2">.</span><span class="s1">multiply</span><span class="s2">(</span><span class="s5">5</span><span class="s2">);</span>
+
+
+        <span class="s1">Phone readerPhone </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Phone</span><span class="s2">(</span><span class="s4">&quot;1234567890&quot;</span><span class="s2">, </span><span class="s4">&quot;Some Phone&quot;</span><span class="s2">);</span>
+        <span class="s1">Readers reader1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Readers</span><span class="s2">(</span><span class="s4">&quot;Kamila Mukhammedova&quot;</span><span class="s2">, </span><span class="s5">12345</span><span class="s2">, </span><span class="s4">&quot;Science&quot;</span><span class="s2">, </span><span class="s4">&quot;2006-10-30&quot;</span><span class="s2">, </span><span class="s1">readerPhone</span><span class="s2">);</span>
+
+        <span class="s1">reader1</span><span class="s2">.</span><span class="s1">takeBook</span><span class="s2">(</span><span class="s5">3</span><span class="s2">);</span>
+        <span class="s1">reader1</span><span class="s2">.</span><span class="s1">takeBook</span><span class="s2">(</span><span class="s4">&quot;Adventures&quot;</span><span class="s2">, </span><span class="s4">&quot;Dictionary&quot;</span><span class="s2">, </span><span class="s4">&quot;Encyclopedia&quot;</span><span class="s2">);</span>
+
+        <span class="s1">Book book1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Book</span><span class="s2">(</span><span class="s4">&quot;Adventures&quot;</span><span class="s2">);</span>
+        <span class="s1">Book book2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Book</span><span class="s2">(</span><span class="s4">&quot;Dictionary&quot;</span><span class="s2">);</span>
+        <span class="s1">Book book3 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Book</span><span class="s2">(</span><span class="s4">&quot;Encyclopedia&quot;</span><span class="s2">);</span>
+
+        <span class="s1">reader1</span><span class="s2">.</span><span class="s1">returnBook</span><span class="s2">(</span><span class="s1">book1</span><span class="s2">, </span><span class="s1">book2</span><span class="s2">, </span><span class="s1">book3</span><span class="s2">);</span>
+
+
+        <span class="s0">int </span><span class="s1">A </span><span class="s2">= </span><span class="s5">5</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">B </span><span class="s2">= </span><span class="s5">10</span><span class="s2">;</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot; your recursive numbers: &quot;</span><span class="s2">);</span>
+        <span class="s1">RecursiveNumbers</span><span class="s2">.</span><span class="s1">printNumbers</span><span class="s2">(</span><span class="s5">5</span><span class="s2">, </span><span class="s5">10</span><span class="s2">);</span>
+
+
+        <span class="s1">Student student1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Student</span><span class="s2">(</span><span class="s4">&quot;Kamila&quot;</span><span class="s2">, </span><span class="s4">&quot;M&quot;</span><span class="s2">, </span><span class="s4">&quot;GroupA&quot;</span><span class="s2">, </span><span class="s5">4.8</span><span class="s2">);</span>
+        <span class="s1">Aspirant aspirant1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Aspirant</span><span class="s2">(</span><span class="s4">&quot;Kamila&quot;</span><span class="s2">, </span><span class="s4">&quot;S&quot;</span><span class="s2">, </span><span class="s4">&quot;GroupB&quot;</span><span class="s2">, </span><span class="s5">5.0</span><span class="s2">, </span><span class="s4">&quot;Quantum Physics&quot;</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">student1</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Scholarship: $&quot; </span><span class="s2">+ </span><span class="s1">student1</span><span class="s2">.</span><span class="s1">getScholarship</span><span class="s2">());</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">aspirant1</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Scholarship: $&quot; </span><span class="s2">+ </span><span class="s1">aspirant1</span><span class="s2">.</span><span class="s1">getScholarship</span><span class="s2">());</span>
+
+
+        <span class="s1">Car car </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Car</span><span class="s2">(</span><span class="s4">&quot;Toyota&quot;</span><span class="s2">, </span><span class="s4">&quot;SUV&quot;</span><span class="s2">, </span><span class="s5">1800</span><span class="s2">, </span><span class="s0">new </span><span class="s1">Driver</span><span class="s2">(</span><span class="s4">&quot;Alice&quot;</span><span class="s2">, </span><span class="s5">5</span><span class="s2">), </span><span class="s0">new </span><span class="s1">Engine</span><span class="s2">(</span><span class="s5">200</span><span class="s2">, </span><span class="s4">&quot;ToyotaEngine&quot;</span><span class="s2">));</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s1">car</span><span class="s2">);</span>
+
+        <span class="s1">Dog dog </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Dog</span><span class="s2">(</span><span class="s4">&quot;DogFood&quot;</span><span class="s2">, </span><span class="s4">&quot;House&quot;</span><span class="s2">, </span><span class="s4">&quot;Bulldog&quot;</span><span class="s2">);</span>
+        <span class="s1">Cat cat </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Cat</span><span class="s2">(</span><span class="s4">&quot;CatFood&quot;</span><span class="s2">, </span><span class="s4">&quot;Garden&quot;</span><span class="s2">, </span><span class="s4">&quot;Siamese&quot;</span><span class="s2">);</span>
+        <span class="s1">Horse horse </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Horse</span><span class="s2">(</span><span class="s4">&quot;Hay&quot;</span><span class="s2">, </span><span class="s4">&quot;Stable&quot;</span><span class="s2">, </span><span class="s4">&quot;Thoroughbred&quot;</span><span class="s2">);</span>
+
+        <span class="s1">Veterinary vet </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Veterinary</span><span class="s2">();</span>
+        <span class="s1">Animal</span><span class="s2">[] </span><span class="s1">animals </span><span class="s2">= {</span><span class="s1">dog</span><span class="s2">, </span><span class="s1">cat</span><span class="s2">, </span><span class="s1">horse</span><span class="s2">};</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">Animal animal </span><span class="s2">: </span><span class="s1">animals</span><span class="s2">) {</span>
+            <span class="s1">vet</span><span class="s2">.</span><span class="s1">treatAnimal</span><span class="s2">(</span><span class="s1">animal</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+</pre>
+</body>
+</html>
